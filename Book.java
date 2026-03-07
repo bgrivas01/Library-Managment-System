@@ -30,4 +30,13 @@ public class Book {
     public void setBorrowed(boolean borrowed) {
         isBoorrowed = borrowed;
     }
+
+    public void borrowBook() {
+        if (!isBoorrowed) {
+            isBoorrowed = true;
+            System.out.println("You have borrowed: " + title);
+        } else {
+            System.out.println("Sorry, " + title + " is already borrowed.");
+        }
+    }
 }
