@@ -31,12 +31,22 @@ public class Book {
         isBoorrowed = borrowed;
     }
 
+    
     public void borrowBook() {
         if (!isBoorrowed) {
             isBoorrowed = true;
             System.out.println("You have borrowed: " + title);
         } else {
             System.out.println("Sorry, " + title + " is already borrowed.");
+        }
+    }
+
+    public void returnBook(){
+        if (isBoorrowed) {
+            isBoorrowed = false;
+            System.out.println("You have returned: " + title);
+        } else {
+            System.out.println("This book was not borrowed.");
         }
     }
 }
